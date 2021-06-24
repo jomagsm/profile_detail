@@ -1,7 +1,7 @@
 import 'network/model/user_model.dart';
 import 'network/service_api.dart';
 
-class WeatherRepository {
+class UserRepository {
   ServiceApi _userProvider = ServiceApi();
   Future<User> getUser() => _userProvider.getUser();
 }
