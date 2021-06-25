@@ -19,11 +19,6 @@ class _$ProfileStateTearOff {
   }
 
 // ignore: unused_element
-  _LoadingProfileState loading() {
-    return const _LoadingProfileState();
-  }
-
-// ignore: unused_element
   _DataProfileState data({@required User user}) {
     return _DataProfileState(
       user: user,
@@ -47,14 +42,12 @@ mixin _$ProfileState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult loading(),
     @required TResult data(User user),
     @required TResult error(String message),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult loading(),
     TResult data(User user),
     TResult error(String message),
     @required TResult orElse(),
@@ -62,14 +55,12 @@ mixin _$ProfileState {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(_InitialProfileState value),
-    @required TResult loading(_LoadingProfileState value),
     @required TResult data(_DataProfileState value),
     @required TResult error(_ErrorProfileState value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(_InitialProfileState value),
-    TResult loading(_LoadingProfileState value),
     TResult data(_DataProfileState value),
     TResult error(_ErrorProfileState value),
     @required TResult orElse(),
@@ -132,12 +123,10 @@ class _$_InitialProfileState implements _InitialProfileState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult loading(),
     @required TResult data(User user),
     @required TResult error(String message),
   }) {
     assert(initial != null);
-    assert(loading != null);
     assert(data != null);
     assert(error != null);
     return initial();
@@ -147,7 +136,6 @@ class _$_InitialProfileState implements _InitialProfileState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult loading(),
     TResult data(User user),
     TResult error(String message),
     @required TResult orElse(),
@@ -163,12 +151,10 @@ class _$_InitialProfileState implements _InitialProfileState {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(_InitialProfileState value),
-    @required TResult loading(_LoadingProfileState value),
     @required TResult data(_DataProfileState value),
     @required TResult error(_ErrorProfileState value),
   }) {
     assert(initial != null);
-    assert(loading != null);
     assert(data != null);
     assert(error != null);
     return initial(this);
@@ -178,7 +164,6 @@ class _$_InitialProfileState implements _InitialProfileState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(_InitialProfileState value),
-    TResult loading(_LoadingProfileState value),
     TResult data(_DataProfileState value),
     TResult error(_ErrorProfileState value),
     @required TResult orElse(),
@@ -193,109 +178,6 @@ class _$_InitialProfileState implements _InitialProfileState {
 
 abstract class _InitialProfileState implements ProfileState {
   const factory _InitialProfileState() = _$_InitialProfileState;
-}
-
-/// @nodoc
-abstract class _$LoadingProfileStateCopyWith<$Res> {
-  factory _$LoadingProfileStateCopyWith(_LoadingProfileState value,
-          $Res Function(_LoadingProfileState) then) =
-      __$LoadingProfileStateCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$LoadingProfileStateCopyWithImpl<$Res>
-    extends _$ProfileStateCopyWithImpl<$Res>
-    implements _$LoadingProfileStateCopyWith<$Res> {
-  __$LoadingProfileStateCopyWithImpl(
-      _LoadingProfileState _value, $Res Function(_LoadingProfileState) _then)
-      : super(_value, (v) => _then(v as _LoadingProfileState));
-
-  @override
-  _LoadingProfileState get _value => super._value as _LoadingProfileState;
-}
-
-/// @nodoc
-class _$_LoadingProfileState implements _LoadingProfileState {
-  const _$_LoadingProfileState();
-
-  @override
-  String toString() {
-    return 'ProfileState.loading()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _LoadingProfileState);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult loading(),
-    @required TResult data(User user),
-    @required TResult error(String message),
-  }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(data != null);
-    assert(error != null);
-    return loading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult loading(),
-    TResult data(User user),
-    TResult error(String message),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (loading != null) {
-      return loading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_InitialProfileState value),
-    @required TResult loading(_LoadingProfileState value),
-    @required TResult data(_DataProfileState value),
-    @required TResult error(_ErrorProfileState value),
-  }) {
-    assert(initial != null);
-    assert(loading != null);
-    assert(data != null);
-    assert(error != null);
-    return loading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_InitialProfileState value),
-    TResult loading(_LoadingProfileState value),
-    TResult data(_DataProfileState value),
-    TResult error(_ErrorProfileState value),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (loading != null) {
-      return loading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _LoadingProfileState implements ProfileState {
-  const factory _LoadingProfileState() = _$_LoadingProfileState;
 }
 
 /// @nodoc
@@ -360,12 +242,10 @@ class _$_DataProfileState implements _DataProfileState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult loading(),
     @required TResult data(User user),
     @required TResult error(String message),
   }) {
     assert(initial != null);
-    assert(loading != null);
     assert(data != null);
     assert(error != null);
     return data(user);
@@ -375,7 +255,6 @@ class _$_DataProfileState implements _DataProfileState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult loading(),
     TResult data(User user),
     TResult error(String message),
     @required TResult orElse(),
@@ -391,12 +270,10 @@ class _$_DataProfileState implements _DataProfileState {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(_InitialProfileState value),
-    @required TResult loading(_LoadingProfileState value),
     @required TResult data(_DataProfileState value),
     @required TResult error(_ErrorProfileState value),
   }) {
     assert(initial != null);
-    assert(loading != null);
     assert(data != null);
     assert(error != null);
     return data(this);
@@ -406,7 +283,6 @@ class _$_DataProfileState implements _DataProfileState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(_InitialProfileState value),
-    TResult loading(_LoadingProfileState value),
     TResult data(_DataProfileState value),
     TResult error(_ErrorProfileState value),
     @required TResult orElse(),
@@ -490,12 +366,10 @@ class _$_ErrorProfileState implements _ErrorProfileState {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult loading(),
     @required TResult data(User user),
     @required TResult error(String message),
   }) {
     assert(initial != null);
-    assert(loading != null);
     assert(data != null);
     assert(error != null);
     return error(message);
@@ -505,7 +379,6 @@ class _$_ErrorProfileState implements _ErrorProfileState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult loading(),
     TResult data(User user),
     TResult error(String message),
     @required TResult orElse(),
@@ -521,12 +394,10 @@ class _$_ErrorProfileState implements _ErrorProfileState {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(_InitialProfileState value),
-    @required TResult loading(_LoadingProfileState value),
     @required TResult data(_DataProfileState value),
     @required TResult error(_ErrorProfileState value),
   }) {
     assert(initial != null);
-    assert(loading != null);
     assert(data != null);
     assert(error != null);
     return error(this);
@@ -536,7 +407,6 @@ class _$_ErrorProfileState implements _ErrorProfileState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(_InitialProfileState value),
-    TResult loading(_LoadingProfileState value),
     TResult data(_DataProfileState value),
     TResult error(_ErrorProfileState value),
     @required TResult orElse(),
@@ -566,11 +436,6 @@ class _$ProfileEventTearOff {
   _InitialProfileEvent initial() {
     return const _InitialProfileEvent();
   }
-
-// ignore: unused_element
-  _ChangeProfileEvent change() {
-    return const _ChangeProfileEvent();
-  }
 }
 
 /// @nodoc
@@ -582,23 +447,19 @@ mixin _$ProfileEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult change(),
   });
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult change(),
     @required TResult orElse(),
   });
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(_InitialProfileEvent value),
-    @required TResult change(_ChangeProfileEvent value),
   });
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(_InitialProfileEvent value),
-    TResult change(_ChangeProfileEvent value),
     @required TResult orElse(),
   });
 }
@@ -659,10 +520,8 @@ class _$_InitialProfileEvent implements _InitialProfileEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object>({
     @required TResult initial(),
-    @required TResult change(),
   }) {
     assert(initial != null);
-    assert(change != null);
     return initial();
   }
 
@@ -670,7 +529,6 @@ class _$_InitialProfileEvent implements _InitialProfileEvent {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object>({
     TResult initial(),
-    TResult change(),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -684,10 +542,8 @@ class _$_InitialProfileEvent implements _InitialProfileEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object>({
     @required TResult initial(_InitialProfileEvent value),
-    @required TResult change(_ChangeProfileEvent value),
   }) {
     assert(initial != null);
-    assert(change != null);
     return initial(this);
   }
 
@@ -695,7 +551,6 @@ class _$_InitialProfileEvent implements _InitialProfileEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object>({
     TResult initial(_InitialProfileEvent value),
-    TResult change(_ChangeProfileEvent value),
     @required TResult orElse(),
   }) {
     assert(orElse != null);
@@ -708,95 +563,4 @@ class _$_InitialProfileEvent implements _InitialProfileEvent {
 
 abstract class _InitialProfileEvent implements ProfileEvent {
   const factory _InitialProfileEvent() = _$_InitialProfileEvent;
-}
-
-/// @nodoc
-abstract class _$ChangeProfileEventCopyWith<$Res> {
-  factory _$ChangeProfileEventCopyWith(
-          _ChangeProfileEvent value, $Res Function(_ChangeProfileEvent) then) =
-      __$ChangeProfileEventCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$ChangeProfileEventCopyWithImpl<$Res>
-    extends _$ProfileEventCopyWithImpl<$Res>
-    implements _$ChangeProfileEventCopyWith<$Res> {
-  __$ChangeProfileEventCopyWithImpl(
-      _ChangeProfileEvent _value, $Res Function(_ChangeProfileEvent) _then)
-      : super(_value, (v) => _then(v as _ChangeProfileEvent));
-
-  @override
-  _ChangeProfileEvent get _value => super._value as _ChangeProfileEvent;
-}
-
-/// @nodoc
-class _$_ChangeProfileEvent implements _ChangeProfileEvent {
-  const _$_ChangeProfileEvent();
-
-  @override
-  String toString() {
-    return 'ProfileEvent.change()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _ChangeProfileEvent);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required TResult initial(),
-    @required TResult change(),
-  }) {
-    assert(initial != null);
-    assert(change != null);
-    return change();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(),
-    TResult change(),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (change != null) {
-      return change();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_InitialProfileEvent value),
-    @required TResult change(_ChangeProfileEvent value),
-  }) {
-    assert(initial != null);
-    assert(change != null);
-    return change(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_InitialProfileEvent value),
-    TResult change(_ChangeProfileEvent value),
-    @required TResult orElse(),
-  }) {
-    assert(orElse != null);
-    if (change != null) {
-      return change(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ChangeProfileEvent implements ProfileEvent {
-  const factory _ChangeProfileEvent() = _$_ChangeProfileEvent;
 }

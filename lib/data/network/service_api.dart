@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
+import 'package:random_user2/data/network/models/user.dart';
 
 import 'dio_settings.dart';
-import 'model/user_model.dart';
 
 class ServiceApi {
   DioSettings _dioSettings;
@@ -22,6 +22,7 @@ class ServiceApi {
       return user;
     } catch (e) {
       print(e);
+      throw e;
     }
   }
 }
